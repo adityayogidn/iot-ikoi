@@ -12,8 +12,8 @@
         android:id="@+id/tv_judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:textSize="25dp"
+        android:layout_marginTop="50dp"
+        android:textSize="50dp"
         android:textColor="#fff"
         android:textStyle="bold"
         android:text="I-KOI"
@@ -24,14 +24,78 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_judul"
-        android:textSize="15dp"
+        android:layout_marginBottom="40dp"
+        android:textSize="17dp"
         android:textColor="#fff"
         android:gravity="center"
         android:text="- Monitoring Kualitas Air Kolam Ikan Koi -"/>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </android.support.v7.widget.CardView>
+    <RelativeLayout
+        android:id="@+id/rv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/tv_arti">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/widget1"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_margin="25dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/ic_monitoring" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Monitroing"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/rv1">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/widget2"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="25dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/ic_controling"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Controling"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
 
 </RelativeLayout>
