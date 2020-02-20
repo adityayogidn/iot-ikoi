@@ -5,21 +5,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background2"
     tools:context=".WelcomeActivity"
     android:id="@+id/welcome_screen">
 
     <ImageView
+        android:id="@+id/ic_fish"
+        android:layout_marginTop="170dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="100dp"
+        android:src="@drawable/ic_fish"/>
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/wallpaper"
-        android:scaleType="fitXY"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ic_fish"
+        android:textSize="50dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="I-KOI"
+        android:gravity="center"
+        android:fontFamily="@font/baloo_regular"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_marginBottom="220dp"/>
 
 </RelativeLayout>
