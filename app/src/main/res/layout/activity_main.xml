@@ -62,7 +62,6 @@
                     android:layout_marginTop="12dp"
                     android:text="Monitoring"
                     android:textSize="20dp"
-                    android:textStyle="bold"
                     android:fontFamily="@font/galyon_bold"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -96,7 +95,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="Controling"
-                    android:textStyle="bold"
                     android:textSize="20dp"
                     android:fontFamily="@font/galyon_bold"/>
             </LinearLayout>
