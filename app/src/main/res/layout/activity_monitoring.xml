@@ -17,7 +17,7 @@
         android:gravity="center"
         android:text="I - KOI"
         android:textColor="#fff"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <RelativeLayout
@@ -49,7 +49,7 @@
             android:layout_height="55dp"
             android:layout_margin="25dp"
             app:cardCornerRadius="12dp"
-            app:cardElevation="4dp">
+            app:cardElevation="6dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -57,38 +57,38 @@
                 android:fontFamily="@font/galyon_bold"
                 android:gravity="center"
                 android:text="Kualitas Air"
-                android:textColor="#70AEFE"
-                android:textSize="24dp" />
+                android:textColor="#90AEFE"
+                android:textSize="24sp" />
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="-30dp"
         android:gravity="center">
 
         <androidx.cardview.widget.CardView
             android:layout_width="350dp"
-            android:layout_height="110dp"
+            android:layout_height="80dp"
             android:layout_margin="25dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="4dp">
 
             <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="120dp"
                 android:src="@drawable/ic_oksigen" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="230dp"
-            android:layout_height="110dp"
+            android:layout_width="240dp"
+            android:layout_height="80dp"
             android:layout_margin="25dp"
             app:cardCornerRadius="12dp"
-            app:cardElevation="4dp">
+            app:cardElevation="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -99,11 +99,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/galyon_bold"
                     android:text="0.5"
                     android:textColor="#000"
-                    android:textSize="60dp" />
+                    android:textSize="45sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -111,7 +111,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/galyon_bold"
                     android:text=" ppm"
-                    android:textSize="25dp" />
+                    android:textSize="20sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
@@ -119,30 +119,30 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="-40dp"
         android:gravity="center">
 
         <androidx.cardview.widget.CardView
             android:layout_width="350dp"
-            android:layout_height="110dp"
+            android:layout_height="80dp"
             android:layout_margin="25dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="4dp">
 
             <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="120dp"
                 android:src="@drawable/ic_ph" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="230dp"
-            android:layout_height="110dp"
+            android:layout_width="240dp"
+            android:layout_height="80dp"
             android:layout_margin="25dp"
             app:cardCornerRadius="12dp"
-            app:cardElevation="4dp">
+            app:cardElevation="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -153,19 +153,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/galyon_bold"
                     android:text="7.4"
                     android:textColor="#000"
-                    android:textSize="60dp" />
+                    android:textSize="45sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/galyon_bold"
+                    android:layout_marginTop="10dp"
                     android:text=" pH"
-                    android:textSize="25dp" />
+                    android:textSize="20sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
@@ -173,30 +173,30 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="-40dp"
         android:gravity="center">
 
         <androidx.cardview.widget.CardView
             android:layout_width="350dp"
-            android:layout_height="110dp"
+            android:layout_height="80dp"
             android:layout_margin="25dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="4dp">
 
             <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="120dp"
                 android:src="@drawable/ic_suhu" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="230dp"
-            android:layout_height="110dp"
+            android:layout_width="240dp"
+            android:layout_height="80dp"
             android:layout_margin="25dp"
             app:cardCornerRadius="12dp"
-            app:cardElevation="4dp">
+            app:cardElevation="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -207,19 +207,129 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/galyon_bold"
                     android:text="25.1"
                     android:textColor="#000"
-                    android:textSize="60dp" />
+                    android:textSize="45sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/galyon_bold"
+                    android:text=" °c"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_margin="25dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="120dp"
+                android:src="@drawable/ic_turbidity" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="240dp"
+            android:layout_height="80dp"
+            android:layout_margin="25dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/galyon_bold"
+                    android:text="8.5"
+                    android:textColor="#000"
+                    android:textSize="45sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/galyon_bold"
-                    android:text=" °c"
-                    android:textSize="25dp" />
+                    android:text=" ntu"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:layout_margin="25dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="120dp"
+                android:src="@drawable/ic_tinggi" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="240dp"
+            android:layout_height="80dp"
+            android:layout_margin="25dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/galyon_bold"
+                    android:text="10.1"
+                    android:textColor="#000"
+                    android:textSize="45sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/galyon_bold"
+                    android:text=" ppm"
+                    android:textSize="20sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>

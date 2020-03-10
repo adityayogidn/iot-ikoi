@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "634078223992",
+    "firebase_url": "https://ikoi-55079.firebaseio.com",
+    "project_id": "ikoi-55079",
+    "storage_bucket": "ikoi-55079.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634078223992:android:4e583bcd0670f2ba16178d",
+        "android_client_info": {
+          "package_name": "com.example.ikoi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "634078223992-qu6usv5n5c1c44dt6agnrqnb7h136s4n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ikoi",
+            "certificate_hash": "1cce81d5591e70d29a87b87ee928f347df0938c1"
+          }
+        },
+        {
+          "client_id": "634078223992-fu3ed4n0dg45o4k05p6hrg1rs8jbln0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBToZjeYA9DEJlbQIzhNDOLH4Xcv56ll2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "634078223992-fu3ed4n0dg45o4k05p6hrg1rs8jbln0i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

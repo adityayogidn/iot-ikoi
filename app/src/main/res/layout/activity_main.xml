@@ -12,7 +12,7 @@
         android:id="@+id/tv_judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:textSize="50dp"
         android:textColor="#fff"
         android:textStyle="bold"
@@ -100,5 +100,15 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rv2"
+        android:layout_marginTop="50dp"
+        android:textSize="10dp"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:text="develop by Aditya Yogi ©2020"/>
 
 </RelativeLayout>
