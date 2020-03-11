@@ -96,6 +96,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/getOksigen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
@@ -150,6 +151,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/getPh"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
@@ -204,6 +206,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/getSuhu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
@@ -258,6 +261,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/getTurbidity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
@@ -314,6 +318,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/getTds"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
