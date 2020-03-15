@@ -44,8 +44,8 @@ public class MonitoringActivity extends AppCompatActivity {
          dataOksigen.addValueEventListener(new ValueEventListener() {
              @Override
              public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                 String value = dataSnapshot.getValue(String.class);
-                 nilaiOksigen.setText(value);
+                 Float value = dataSnapshot.getValue(Float.class);
+                 nilaiOksigen.setText(value.toString());
              }
 
              @Override
@@ -70,8 +70,8 @@ public class MonitoringActivity extends AppCompatActivity {
         dataSuhu.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                nilaiSuhu.setText(value);
+                Float value = dataSnapshot.getValue(Float.class);
+                nilaiSuhu.setText(value.toString());
             }
 
             @Override
@@ -83,8 +83,8 @@ public class MonitoringActivity extends AppCompatActivity {
         dataTurbidity.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                nilaiTurbidity.setText(value);
+                Float value = dataSnapshot.getValue(Float.class);
+                nilaiTurbidity.setText(value.toString());
             }
 
             @Override
@@ -96,8 +96,8 @@ public class MonitoringActivity extends AppCompatActivity {
         dataTds.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                nilaiTds.setText(value);
+                Float value = dataSnapshot.getValue(Float.class);
+                nilaiTds.setText(value.toString());
             }
 
             @Override
