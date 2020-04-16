@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 
 import com.google.firebase.database.DataSnapshot;
@@ -28,46 +29,84 @@ public class ControlingActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(getString(R.string.app_name));
 
         final Switch switchPompa1 = (Switch) findViewById(R.id.switch_pompa1);
-        Switch switchPompa2 = (Switch) findViewById(R.id.switch_pompa2);
-        Switch switchPompa3 = (Switch) findViewById(R.id.switch_pompa3);
-        Switch switchHeater = (Switch) findViewById(R.id.switch_heater);
-        Switch switchCooler = (Switch) findViewById(R.id.switch_cooler);
+        final Switch switchPompa2 = (Switch) findViewById(R.id.switch_pompa2);
+        final Switch switchPompa3 = (Switch) findViewById(R.id.switch_pompa3);
+        final Switch switchHeater = (Switch) findViewById(R.id.switch_heater);
+        final Switch switchCooler = (Switch) findViewById(R.id.switch_cooler);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
         DatabaseReference getRelay = database.getReference("relay");
         final DatabaseReference statusPompa1 = getRelay.child("p_fltrasi/status");
-        DatabaseReference statusPompa2 = getRelay.child("p_kolam/status");
-        DatabaseReference statusPompa3 = getRelay.child("p_sumber/status");
-        DatabaseReference statusHeater = getRelay.child("heater/status");
-        DatabaseReference statusCooler = getRelay.child("cooler/status");
+        final DatabaseReference statusPompa2 = getRelay.child("p_kolam/status");
+        final DatabaseReference statusPompa3 = getRelay.child("p_sumber/status");
+        final DatabaseReference statusHeater = getRelay.child("heater/status");
+        final DatabaseReference statusCooler = getRelay.child("cooler/status");
 
-        statusPompa1.addValueEventListener(new ValueEventListener() {
+        switchPompa1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Integer value = dataSnapshot.getValue(Integer.class);
-                if(value==1) {
-                    switchPompa1.isChecked();
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    statusPompa1.setValue(true);
+                    switchPompa1.setTextOn("Nyala");
+                }else{
+                    statusPompa1.setValue(false);
+                    switchPompa1.setTextOff("Mati");
                 }
-
-                switchPompa1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if(switchPompa1.isChecked()){
-                            statusPompa1.setValue(1);
-                        }else{
-                            statusPompa1.setValue(0);
-                        }
-                    }
-                });
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.w(TAG, "onCancelled", databaseError.toException());
             }
         });
 
+        switchPompa2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    statusPompa2.setValue(true);
+                    switchPompa2.setTextOn("Nyala");
+                }else{
+                    statusPompa2.setValue(false);
+                    switchPompa2.setTextOff("Mati");
+                }
+            }
+        });
+
+        switchPompa3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    statusPompa3.setValue(true);
+                    switchPompa3.setTextOn("Nyala");
+                }else{
+                    statusPompa3.setValue(false);
+                    switchPompa3.setTextOff("Mati");
+                }
+            }
+        });
+
+        switchHeater.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    statusHeater.setValue(true);
+                    switchHeater.setTextOn("Nyala");
+                }else{
+                    statusHeater.setValue(false);
+                    switchHeater.setTextOff("Mati");
+                }
+            }
+        });
+
+        switchCooler.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    statusCooler.setValue(true);
+                    switchCooler.setTextOn("Nyala");
+                }else{
+                    statusCooler.setValue(false);
+                    switchCooler.setTextOff("Mati");
+                }
+            }
+        });
     }
 
     @Override
