@@ -43,15 +43,102 @@ public class ControlingActivity extends AppCompatActivity {
         final DatabaseReference statusHeater = getRelay.child("heater/status");
         final DatabaseReference statusCooler = getRelay.child("cooler/status");
 
+        //mengambil value data dari firebase
+        statusPompa1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                boolean value = dataSnapshot.getValue(Boolean.class);
+                if(value==true){
+                    switchPompa1.setChecked(true);
+                } else {
+                    switchPompa1.setChecked(false);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+        statusPompa2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                boolean value = dataSnapshot.getValue(Boolean.class);
+                if(value==true){
+                    switchPompa2.setChecked(true);
+                } else {
+                    switchPompa2.setChecked(false);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+        statusPompa3.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                boolean value = dataSnapshot.getValue(Boolean.class);
+                if(value==true){
+                    switchPompa3.setChecked(true);
+                } else {
+                    switchPompa3.setChecked(false);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+        statusCooler.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                boolean value = dataSnapshot.getValue(Boolean.class);
+                if(value==true){
+                    switchCooler.setChecked(true);
+                } else {
+                    switchCooler.setChecked(false);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+        statusHeater.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                boolean value = dataSnapshot.getValue(Boolean.class);
+                if(value==true){
+                    switchHeater.setChecked(true);
+                } else {
+                    switchHeater.setChecked(false);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
+
+        //melakukan set data jika di-klik on/off dan mengirimkan value datanya ke firebase
         switchPompa1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     statusPompa1.setValue(true);
-                    switchPompa1.setTextOn("Nyala");
+                    switchPompa1.setText("Nyala");
                 }else{
                     statusPompa1.setValue(false);
-                    switchPompa1.setTextOff("Mati");
+                    switchPompa1.setText("Mati");
                 }
             }
         });
@@ -61,10 +148,10 @@ public class ControlingActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     statusPompa2.setValue(true);
-                    switchPompa2.setTextOn("Nyala");
+                    switchPompa2.setText("Nyala");
                 }else{
                     statusPompa2.setValue(false);
-                    switchPompa2.setTextOff("Mati");
+                    switchPompa2.setText("Mati");
                 }
             }
         });
@@ -74,10 +161,10 @@ public class ControlingActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     statusPompa3.setValue(true);
-                    switchPompa3.setTextOn("Nyala");
+                    switchPompa3.setText("Nyala");
                 }else{
                     statusPompa3.setValue(false);
-                    switchPompa3.setTextOff("Mati");
+                    switchPompa3.setText("Mati");
                 }
             }
         });
@@ -87,10 +174,10 @@ public class ControlingActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     statusHeater.setValue(true);
-                    switchHeater.setTextOn("Nyala");
+                    switchHeater.setText("Nyala");
                 }else{
                     statusHeater.setValue(false);
-                    switchHeater.setTextOff("Mati");
+                    switchHeater.setText("Mati");
                 }
             }
         });
@@ -100,10 +187,10 @@ public class ControlingActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     statusCooler.setValue(true);
-                    switchCooler.setTextOn("Nyala");
+                    switchCooler.setText("Nyala");
                 }else{
                     statusCooler.setValue(false);
-                    switchCooler.setTextOff("Mati");
+                    switchCooler.setText("Mati");
                 }
             }
         });
