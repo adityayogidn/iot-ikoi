@@ -14,12 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:textSize="40dp"
-        android:textColor="#fff"
-        android:textStyle="bold"
-        android:text="Controling"
+        android:fontFamily="@font/galyon_bold"
         android:gravity="center"
-        android:fontFamily="@font/galyon_bold"/>
+        android:text="Controlling"
+        android:textColor="#fff"
+        android:textSize="40dp"
+        android:textStyle="bold" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,14 +51,15 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="5dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pompa 1"
-                    android:textColor="#000"
                     android:layout_marginTop="-5dp"
-                    android:textSize="25dp"
-                    android:fontFamily="@font/galyon_bold"/>
+                    android:fontFamily="@font/galyon_bold"
+                    android:text="Pump 1"
+                    android:textColor="#000"
+                    android:textSize="25dp" />
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -87,14 +88,15 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="5dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pompa 2"
-                    android:textColor="#000"
                     android:layout_marginTop="-5dp"
-                    android:textSize="25dp"
-                    android:fontFamily="@font/galyon_bold"/>
+                    android:fontFamily="@font/galyon_bold"
+                    android:text="Pump 2"
+                    android:textColor="#000"
+                    android:textSize="25dp" />
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -130,14 +132,15 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="5dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pompa 3"
-                    android:textColor="#000"
                     android:layout_marginTop="-5dp"
-                    android:textSize="25dp"
-                    android:fontFamily="@font/galyon_bold"/>
+                    android:fontFamily="@font/galyon_bold"
+                    android:text="Pump 3"
+                    android:textColor="#000"
+                    android:textSize="25dp" />
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"

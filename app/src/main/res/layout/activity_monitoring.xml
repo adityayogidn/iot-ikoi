@@ -56,9 +56,9 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/galyon_bold"
                 android:gravity="center"
-                android:text="Kualitas Air"
+                android:text="Water Quality"
                 android:textColor="#90AEFE"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
 

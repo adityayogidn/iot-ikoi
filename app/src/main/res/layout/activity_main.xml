@@ -31,7 +31,7 @@
         android:textColor="#fff"
         android:gravity="center"
         android:fontFamily="@font/galyon_bold"
-        android:text="- Monitoring Kualitas Air Kolam Ikan Koi -"/>
+        android:text="- Monitoring the quality of koi pond water -"/>
 
     <RelativeLayout
         android:id="@+id/rv1"
@@ -94,7 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Controling"
+                    android:text="Controlling"
                     android:textSize="20dp"
                     android:fontFamily="@font/galyon_bold"/>
             </LinearLayout>
