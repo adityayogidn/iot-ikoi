@@ -135,10 +135,10 @@ public class ControlingActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     statusPompa1.setValue(true);
-                    switchPompa1.setText("Nyala");
+                    switchPompa1.setText("ON");
                 }else{
                     statusPompa1.setValue(false);
-                    switchPompa1.setText("Mati");
+                    switchPompa1.setText("OFF");
                 }
             }
         });
@@ -148,10 +148,10 @@ public class ControlingActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     statusPompa2.setValue(true);
-                    switchPompa2.setText("Nyala");
+                    switchPompa2.setText("ON");
                 }else{
                     statusPompa2.setValue(false);
-                    switchPompa2.setText("Mati");
+                    switchPompa2.setText("OFF");
                 }
             }
         });
@@ -161,10 +161,10 @@ public class ControlingActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     statusPompa3.setValue(true);
-                    switchPompa3.setText("Nyala");
+                    switchPompa3.setText("ON");
                 }else{
                     statusPompa3.setValue(false);
-                    switchPompa3.setText("Mati");
+                    switchPompa3.setText("OFF");
                 }
             }
         });
@@ -174,10 +174,10 @@ public class ControlingActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     statusHeater.setValue(true);
-                    switchHeater.setText("Nyala");
+                    switchHeater.setText("ON");
                 }else{
                     statusHeater.setValue(false);
-                    switchHeater.setText("Mati");
+                    switchHeater.setText("OFF");
                 }
             }
         });
@@ -187,10 +187,10 @@ public class ControlingActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     statusCooler.setValue(true);
-                    switchCooler.setText("Nyala");
+                    switchCooler.setText("ON");
                 }else{
                     statusCooler.setValue(false);
-                    switchCooler.setText("Mati");
+                    switchCooler.setText("OFF");
                 }
             }
         });
