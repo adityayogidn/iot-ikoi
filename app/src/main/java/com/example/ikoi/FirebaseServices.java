@@ -18,7 +18,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Map;
-
 public class FirebaseServices extends FirebaseMessagingService {
     @Override
     public void onNewToken(String token) {
@@ -32,13 +31,6 @@ public class FirebaseServices extends FirebaseMessagingService {
 
         Map<String, String> data = remoteMessage.getData();
         String dataPayload = data.get("data");
-
-
-        /*
-         * Cek jika notif berisi data payload
-         * pengiriman data payload dapat dieksekusi secara background atau foreground
-         */
-
         if (remoteMessage.getData().size() > 0) {
             Log.e("TAG", "Message data payload: " + remoteMessage.getData());
 
@@ -49,12 +41,6 @@ public class FirebaseServices extends FirebaseMessagingService {
                 e.printStackTrace();
             }
         }
-
-        /*
-         * Cek jika notif berisi data notification payload
-         * hanya dieksekusi ketika aplikasi bejalan secara foreground
-         * dan dapat push notif melalui UI Firebase console
-         */
         if (remoteMessage.getNotification() != null) {
             Log.e("TAG", "Message Notification Body: " + remoteMessage.getNotification().getBody());
             showNotif(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody());
@@ -62,7 +48,6 @@ public class FirebaseServices extends FirebaseMessagingService {
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void showNotif(String title, String message){
-
         Bundle bundle = new Bundle();
         bundle.putString("title", title);
         bundle.putString("message", message);

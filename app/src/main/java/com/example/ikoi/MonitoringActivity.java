@@ -2,8 +2,16 @@ package com.example.ikoi;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -32,6 +40,7 @@ public class MonitoringActivity extends AppCompatActivity {
         final TextView nilaiTurbidity = (TextView) findViewById(R.id.getTurbidity);
         final TextView nilaiTds = (TextView) findViewById(R.id.getTds);
 
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
         DatabaseReference dataSensor = database.getReference("data_sensor");
@@ -50,7 +59,7 @@ public class MonitoringActivity extends AppCompatActivity {
 
              @Override
              public void onCancelled(@NonNull DatabaseError databaseError) {
-                 Log.w(TAG, "onCancelled", databaseError.toException());
+                 Log.w(TAG, "Failed to read value", databaseError.toException());
              }
          });
 
@@ -63,7 +72,7 @@ public class MonitoringActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.w(TAG, "onCancelled", databaseError.toException());
+                Log.w(TAG, "Failed to read value", databaseError.toException());
             }
         });
 
@@ -76,7 +85,7 @@ public class MonitoringActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.w(TAG, "onCancelled", databaseError.toException());
+                Log.w(TAG, "Failed to read value", databaseError.toException());
             }
         });
 
@@ -89,7 +98,7 @@ public class MonitoringActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.w(TAG, "onCancelled", databaseError.toException());
+                Log.w(TAG, "Failed to read value", databaseError.toException());
             }
         });
 
@@ -102,10 +111,64 @@ public class MonitoringActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.w(TAG, "onCancelled", databaseError.toException());
+                Log.w(TAG, "Failed to read value", databaseError.toException());
             }
         });
 
+        final TextView nilaiKualitasAir = findViewById(R.id.tv_kualitasAir);
+        final DatabaseReference kualitasAir = database.getReference("kualitas_air");
+        kualitasAir.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                int value = dataSnapshot.getValue(Integer.class);
+                if (value == 1){
+                    nilaiKualitasAir.setText("Normal");
+                } else if (value == 2) {
+                    nilaiKualitasAir.setText("Warning");
+                } else if(value == 3) {
+                    nilaiKualitasAir.setText("Danger");
+                } else {
+                    nilaiKualitasAir.setText("Error");
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w(TAG, "Failed to read value", databaseError.toException());
+            }
+        });
+
+    }
+
+    private void notification(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel channel =
+                    new NotificationChannel("n", "n", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+
+        Intent intent = new Intent(this, MonitoringActivity.class);
+        //intent.putExtras(bundle);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
+                PendingIntent.FLAG_ONE_SHOT);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "n")
+                .setContentTitle("Kualitas Air")
+                .setContentText("Kualitas Air Kolam NORMAL")
+                .setAutoCancel(true)
+                .setSmallIcon(R.drawable.ic_fish) // icon
+                .setAutoCancel(true) // menghapus notif ketika user melakukan tap pada notif
+                .setLights(200,200,200) // light button
+                .setSound(Settings.System.DEFAULT_NOTIFICATION_URI) // set sound
+                .setOnlyAlertOnce(true) // set alert sound notif
+                .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+                //.setStyle(new NotificationCompat.BigTextStyle().bigText(message))
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setContentIntent(pendingIntent); // action notif ketika di tap
+        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
+        managerCompat.notify(1,builder.build());
     }
 
     @Override

@@ -48,7 +48,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            NotificationChannel channel = new NotificationChannel("NotifApps", "NotifyApps", NotificationManager.IMPORTANCE_HIGH);
+            NotificationChannel channel =
+                    new NotificationChannel("NotifApps", "NotifyApps",
+                                            NotificationManager.IMPORTANCE_HIGH);
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }
