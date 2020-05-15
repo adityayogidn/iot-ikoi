@@ -40,8 +40,6 @@
                 android:layout_marginTop="50dp"
                 android:fontFamily="@font/galyon_bold"
                 android:gravity="center"
-                android:text="Normal"
-                android:textColor="#7E7B7B"
                 android:textSize="27dp" />
         </androidx.cardview.widget.CardView>
 
