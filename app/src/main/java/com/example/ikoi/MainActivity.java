@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.app.AlertDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,8 +22,7 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 
 public class MainActivity extends AppCompatActivity {
-    CardView pindahHalMonioring;
-    CardView pindahHalControling;
+    CardView pindahHalMonioring, pindahHalControling, pindahHalHistory, keluar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         pindahHalMonioring = findViewById(R.id.widget1);
         pindahHalControling = findViewById(R.id.widget2);
+        pindahHalHistory = findViewById(R.id.widget3);
+        keluar = findViewById(R.id.widget4);
 
         pindahHalMonioring.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +47,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, ControlingActivity.class);
                 startActivity(i);
+            }
+        });
+        pindahHalHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, HistoryActivity.class);
+                startActivity(i);
+            }
+        });
+        keluar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showAlertDialog();
             }
         });
 
@@ -85,13 +101,33 @@ public class MainActivity extends AppCompatActivity {
                 // Log and toast
                 String msg = getString(R.string.msg_token_fmt, token);
                 Log.d("TAG", msg);
-                Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
             }
         });
     }
 
+    private void showAlertDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this)
+                .setMessage("Do you want to exit?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
     @Override
     public void onBackPressed() {
-        finishAffinity();
+        showAlertDialog();
     }
 }

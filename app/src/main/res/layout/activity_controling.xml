@@ -10,25 +10,14 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv_judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/galyon_bold"
-        android:gravity="center"
-        android:text="Controlling"
-        android:textColor="#fff"
-        android:textSize="40dp"
-        android:textStyle="bold" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp"
         android:textSize="20dp"
         android:textColor="#fff"
         android:textStyle="bold"
-        android:text="Pompa"
+        android:text="Pump"
         android:gravity="left"
         android:fontFamily="@font/galyon_bold"/>
 
@@ -51,7 +40,6 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="5dp">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -88,7 +76,6 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="5dp">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -159,12 +146,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         android:layout_marginLeft="30dp"
         android:textSize="20dp"
         android:textColor="#fff"
         android:textStyle="bold"
-        android:text="Aktuator Suhu"
+        android:text="Temperature Actuator"
         android:gravity="left"
         android:fontFamily="@font/galyon_bold"/>
 

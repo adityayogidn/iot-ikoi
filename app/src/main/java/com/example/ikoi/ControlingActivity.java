@@ -26,7 +26,7 @@ public class ControlingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_controling);
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(getString(R.string.app_name));
+        getSupportActionBar().setTitle(getString(R.string.controlling));
 
         final Switch switchPompa1 = (Switch) findViewById(R.id.switch_pompa1);
         final Switch switchPompa2 = (Switch) findViewById(R.id.switch_pompa2);

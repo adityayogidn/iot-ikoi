@@ -33,7 +33,7 @@ public class MonitoringActivity extends AppCompatActivity {
         setContentView(R.layout.activity_monitoring);
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(getString(R.string.app_name));
+        getSupportActionBar().setTitle(getString(R.string.monitoring));
 
         final TextView nilaiOksigen = (TextView) findViewById(R.id.getOksigen);
         final TextView nilaiPh = (TextView) findViewById(R.id.getPh);

@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">I-KOI</string>
+    <string name="monitoring">Monitoring</string>
+    <string name="controlling">Controlling</string>
+    <string name="history">History</string>
     <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
 </resources>
