@@ -8,14 +8,9 @@
     android:orientation="vertical"
     tools:context=".HistoryActivity">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_riwayat"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="17dp"
-        android:layout_marginTop="300dp"
-        android:textColor="#fff"
-        android:gravity="center"
-        android:fontFamily="@font/galyon_bold"
-        android:text="A feature still under development :)"/>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
