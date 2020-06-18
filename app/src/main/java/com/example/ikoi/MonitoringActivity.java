@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -125,15 +127,15 @@ public class MonitoringActivity extends AppCompatActivity {
                 if (value == 1){
                     nilaiKualitasAir.setText("Normal");
                     nilaiKualitasAir.setTextColor(Color.parseColor("#03A9F4"));
-                    notification_normal();
+                    notification_normal1();
                 } else if (value == 2) {
                     nilaiKualitasAir.setText("Warning");
                     nilaiKualitasAir.setTextColor(Color.parseColor("#FFC107"));
-                    notification_warning();
+                    notification_warning1();
                 } else if(value == 3) {
                     nilaiKualitasAir.setText("Danger");
                     nilaiKualitasAir.setTextColor(Color.parseColor("#FF1807"));
-                    notification_danger();
+                    notification_danger1();
                 } else {
                     nilaiKualitasAir.setText("Error");
                 }
@@ -234,6 +236,103 @@ public class MonitoringActivity extends AppCompatActivity {
         NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
         managerCompat.notify(1,builder.build());
     }
+
+    private void notification_normal1() {
+        String NOTIFICATION_CHANNEL_ID = "channel_androidnotif";
+        Context context = this.getApplicationContext();
+        NotificationManager notificationManager = (NotificationManager)
+                context.getSystemService(context.NOTIFICATION_SERVICE);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            String channelName = "Android Notif Channel";
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+
+            NotificationChannel mChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID,
+                    channelName, importance);
+            notificationManager.createNotificationChannel(mChannel);
+        }
+        Intent mIntent = new Intent(this, MonitoringActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("fromnotif", "notif");
+        mIntent.putExtras(bundle);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, mIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,NOTIFICATION_CHANNEL_ID);
+        builder.setContentIntent(pendingIntent)
+                .setSmallIcon(R.drawable.ic_fish)
+                .setTicker("notif starting")
+                .setOngoing(true)
+                .setDefaults(Notification.DEFAULT_SOUND)
+                .setContentTitle("Kualitas Air")
+                .setContentText("Status Kolam NORMAL");
+        notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        notificationManager.notify(115, builder.build());
+    }
+
+    private void notification_warning1() {
+        String NOTIFICATION_CHANNEL_ID = "channel_androidnotif";
+        Context context = this.getApplicationContext();
+        NotificationManager notificationManager = (NotificationManager)
+                context.getSystemService(context.NOTIFICATION_SERVICE);
+        if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O){
+            String channelName = "Android Notif Channel";
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+
+            NotificationChannel mChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID,
+                    channelName, importance);
+            notificationManager.createNotificationChannel(mChannel);
+        }
+        Intent mIntent = new Intent(this, MonitoringActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("fromnotif", "notif");
+        mIntent.putExtras(bundle);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, mIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,NOTIFICATION_CHANNEL_ID);
+        builder.setContentIntent(pendingIntent)
+                .setSmallIcon(R.drawable.ic_fish)
+                .setTicker("notif starting")
+                .setOngoing(true)
+                .setDefaults(Notification.DEFAULT_SOUND)
+                .setContentTitle("Kualitas Air")
+                .setContentText("Status Kolam WARNING");
+        notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        notificationManager.notify(115, builder.build());
+    }
+
+    private void notification_danger1() {
+        String NOTIFICATION_CHANNEL_ID = "channel_androidnotif";
+        Context context = this.getApplicationContext();
+        NotificationManager notificationManager = (NotificationManager)
+                context.getSystemService(context.NOTIFICATION_SERVICE);
+        if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O){
+            String channelName = "Android Notif Channel";
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+
+            NotificationChannel mChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID,
+                    channelName, importance);
+            notificationManager.createNotificationChannel(mChannel);
+        }
+        Intent mIntent = new Intent(this, MonitoringActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("fromnotif", "notif");
+        mIntent.putExtras(bundle);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, mIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,NOTIFICATION_CHANNEL_ID);
+        builder.setContentIntent(pendingIntent)
+                .setSmallIcon(R.drawable.ic_fish)
+                .setTicker("notif starting")
+                .setOngoing(true)
+                .setDefaults(Notification.DEFAULT_SOUND)
+                .setContentTitle("Kualitas Air")
+                .setContentText("Status Kolam DANGER");
+        notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        notificationManager.notify(115, builder.build());
+    }
+
 
     @Override
     public boolean onSupportNavigateUp(){
