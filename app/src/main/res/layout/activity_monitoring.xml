@@ -80,6 +80,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="120dp"
                 android:src="@drawable/ic_oksigen" />
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -88,6 +89,16 @@
             android:layout_margin="25dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="right"
+                android:textStyle="bold"
+                android:text="Oxygen"
+                android:textSize="10sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -143,6 +154,16 @@
             app:cardCornerRadius="12dp"
             app:cardElevation="6dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="right"
+                android:textStyle="bold"
+                android:text="pH"
+                android:textSize="10sp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -197,6 +218,16 @@
             app:cardCornerRadius="12dp"
             app:cardElevation="6dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="right"
+                android:textStyle="bold"
+                android:text="Temperature"
+                android:textSize="10sp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -215,7 +246,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="-10dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/galyon_bold"
                     android:text=" °c"
                     android:textSize="20sp" />
@@ -250,6 +281,16 @@
             android:layout_margin="25dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="right"
+                android:textStyle="bold"
+                android:text="Turbidity"
+                android:textSize="10sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -306,6 +347,16 @@
             android:layout_margin="25dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="right"
+                android:textStyle="bold"
+                android:text="Tds"
+                android:textSize="10sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"

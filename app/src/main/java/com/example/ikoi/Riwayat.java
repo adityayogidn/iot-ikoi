@@ -1,22 +1,25 @@
 package com.example.ikoi;
 
 public class Riwayat {
-    private String day;
+    private String date;
     private String time;
     private String status;
 
-    public Riwayat(String day, String time, String status) {
-        this.day = day;
+    public Riwayat(){
+    }
+
+    public Riwayat(String date, String time, String status) {
+        this.date = date;
         this.time = time;
         this.status = status;
     }
 
-    public String getDay() {
-        return day;
+    public String getDate() {
+        return date;
     }
 
-    public void setDay(String day) {
-        this.day = day;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getTime() {

@@ -263,8 +263,8 @@ public class MonitoringActivity extends AppCompatActivity {
                 .setTicker("notif starting")
                 .setOngoing(true)
                 .setDefaults(Notification.DEFAULT_SOUND)
-                .setContentTitle("Kualitas Air")
-                .setContentText("Status Kolam NORMAL");
+                .setContentTitle("Quality Of Water")
+                .setContentText("Status: NORMAL");
         notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.notify(115, builder.build());
     }
@@ -295,8 +295,8 @@ public class MonitoringActivity extends AppCompatActivity {
                 .setTicker("notif starting")
                 .setOngoing(true)
                 .setDefaults(Notification.DEFAULT_SOUND)
-                .setContentTitle("Kualitas Air")
-                .setContentText("Status Kolam WARNING");
+                .setContentTitle("Quality Of Water")
+                .setContentText("Status: WARNING");
         notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.notify(115, builder.build());
     }
@@ -327,8 +327,8 @@ public class MonitoringActivity extends AppCompatActivity {
                 .setTicker("notif starting")
                 .setOngoing(true)
                 .setDefaults(Notification.DEFAULT_SOUND)
-                .setContentTitle("Kualitas Air")
-                .setContentText("Status Kolam DANGER");
+                .setContentTitle("Quality Of Water")
+                .setContentText("Status: DANGER");
         notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.notify(115, builder.build());
     }
